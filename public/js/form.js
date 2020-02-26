@@ -5,38 +5,33 @@
 $("#add-btn").on("click", function(event) {
   event.preventDefault();
 
-  // make a newCharacter obj
-  var newCharacter = {
+  // make a new website obj
+  var newWebsite = {
     // name from name input
-    name: $("#name").val().trim(),
+    header: $("#header").val().trim(),
     // role from role input
-    role: $("#role").val().trim(),
+    body: $("#body").val().trim(),
     // age from age input
-    age: $("#age").val().trim(),
-    // points from force-points input
-    forcePoints: $("#force-points").val().trim()
+    footer: $("#footer").val().trim(),
   };
+  console.log(newWebsite)
 
   // send an AJAX POST-request with jQuery
-  $.post("/api/new", newCharacter)
+  $.post("/api/website", newWebsite)
+  // console.log(newWebsite)
     // on success, run this callback
     .then(function(data) {
       // log the data we found
       console.log(data);
       // tell the user we're adding a character with an alert window
-      alert("Adding character...");
+      alert("generating website...");
     });
 
   // empty each input box by replacing the value with an empty string
-  $("#name").val("");
-  $("#role").val("");
-  $("#age").val("");
-  $("#force-points").val("");
-
 });
 
-// It pings the server. The server then pings the database and displays all of the characters.
+// It pings the server. The server then pings the database and displays the new website.
 
 
-// make a get request to our api to grab every character
+// make a get request to the website
 
