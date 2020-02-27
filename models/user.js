@@ -1,10 +1,24 @@
 module.exports = function(sequelize, DataTypes) {
 
-    var Website = sequelize.define("page_table", {
-    user_id: INT NOT NULL AUTO_INCREMENT,
-    first_name: VARCHAR(50) NOT NULL,
-    last_name: VARCHAR(50) NOT NULL,
-    PRIMARY: KEY (user_id)
+    var User = sequelize.define("User", {
+    first_name: 
+    {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    last_name: {
+        type: DataTypes.STRING,
+        allowNull: false
+    }
 })
-    return user_table;
+
+User.associate = function(models) {
+    // Associating User with Website
+    // When an Author is deleted, also delete any associated Posts
+    User.hasMany(models.Website, {
+      onDelete: "cascade"
+    });
+  };
+
+    return User;
 }
