@@ -45,3 +45,38 @@ button.edit {
 .top-30 {
   margin-top: 30px;
 }
+
+.footer {
+  background-color: #d6d6d6;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+}
+
+#choiceWindow,
+#confirmWindow {
+  border-right: -1rem;
+  border: #7a7a7a 0.1rem solid;
+  border-radius: 1rem;
+}
+
+/* #choiceTitle {
+  background-color: #7a7a7a;
+  border-top-left-radius: 1rem;
+} */
+
+li {
+  padding-bottom: 1rem;
+}
+.btnList {
+  position: absolute;
+  right: 0;
+  margin-right: 1rem;
+}
+
+.btnDown {
+  position: absolute;
+  right: 6rem;
+}
+

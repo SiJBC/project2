@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>One-page-man</title>
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <!--Import Google Icon Font-->
+    <!-- Compressed CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles-m.css" type="text/css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">
+                <i class="fa fa-hand-pointer-o">One Page Man</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#">Guide</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Log in</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- this div will show after 'log in' has been clicked -->
+    <nav style="display: none">
+        <div class="nav-wrapper">
+            <div class="row">
+                <form class="col s6">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="email" type="text" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="password" type="text" class="validate">
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div style="display: block">
+        description about what we do, and how the user can use this app
+    </div>
+
+    <div class="container" style="display: block">
+        <div class="row">
+            <div class="col m6" id="choiceWindow">
+                <form>
+                    <h6 id="choiceTitle">
+                        Add the things that you would like to display in the website
+                    </h6>
+                    <ul>
+                        <li class="userChoice">
+                            Title
+                            <!-- when the add button clicked, the info will be recored and save to db, and move to right side -->
+                            <button type="submit" class="waves-effect waves-light btn btnList">add</button>
+                        </li>
+                        <li class="userChoice">
+                            Tagline
+                            <button type="submit" class="waves-effect waves-light btn btnList">add</button>
+                        </li>
+                        <li class="userChoice">
+                            Descriptions
+                            <button type="submit" class="waves-effect waves-light btn btnList">add</button>
+                        </li>
+                        <li class="userChoice">
+                            Products/services (Maxium 3)
+                            <button type="submit" class="waves-effect waves-light btn btnList">add</button>
+                        </li>
+                        <li class="userChoice">
+                            Contact details
+                            <button type="submit" class="waves-effect waves-light btn btnList">add</button>
+                        </li>
+                </form>
+            </div>
+            <div class="col m6" id="confirmWindow">
+                <form>
+                    <div class="input-field">
+                        <input id="websiteName" type="text" class="validate">
+                        <label for="websiteName">Website Name</label>
+                    </div>
+                    <ul>
+                        <li>
+                            Things that need to confirmed
+                            <!-- remove button to remove from db -->
+                            <button type="submit" class="waves-effect waves-light btn btnDown">
+                                <i class="fa fa-chevron-down"></i></button>
+                            <button type="submit" class="waves-effect waves-light btn btnRemove">remove</button>
+                            <!-- when arrowdown has been clicked, show below list -->
+                            <div id="cardForm" style="display: block">
+                                <div class="input-field">
+                                    <input id="titleName" type="text" class="validate">
+                                    <label for="titleName">Title Name</label>
+                                </div>
+                                <div class="input-field">
+                                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                    <label for="content">Content</label>
+                                </div>
+                                <div class="form-group">
+                                    <!-- <label for="exampleFormControlFile1">Upload image</label> -->
+                                    <input id="photoUpload" type="file" class="form-control-file">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            Things that need to confirmed
+                            <button type="submit" class="waves-effect waves-light btn btnDown">
+                                <i class="fa fa-chevron-down"></i></button>
+                            <button type="submit" class="waves-effect waves-light btn btnRemove">remove</button>
+                        </li>
+                        <li>
+                            Things that need to confirmed
+                            <button type="submit" class="waves-effect waves-light btn btnDown">
+                                <i class="fa fa-chevron-down"></i></button>
+                            <button type="submit" class="waves-effect waves-light btn btnRemove">remove</button>
+                        </li>
+                    </ul>
+                </form>
+                <div id="submitSection">
+                    <!-- once the confirm button has been clicked, a alert pop up -->
+                    Create the website now
+                    <button type="submit" class="waves-effect waves-light btn btnConfirm">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>One Page Man Copyright &copy; 2020</p>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Compressed JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- <script src="assets/javascript/javaScript01.js"></script> -->
+    <!-- <script src="assets/javascript/index-page-js.js"></script> -->
+</body>
+
+</html>
