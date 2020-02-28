@@ -21,14 +21,16 @@ module.exports = function (app) {
     // app.get("/dev", function (req, res) {
     // res.render(path.join(__dirname, "../views/index.handlebars") {
         app.get("/dev", function(req, res) {
-         
-            db.Website.findAll({
-            }).then(function(data) {
+                db.Website.findAll({
+                //  inclde: [db.Website]   
+            }).then(function(response) {
                 var hbsObject = {
-                    website: data
+                    website: response[0].dataValues
                   };
-                  console.log(hbsObject.website);
-                  res.render("index", hbsObject.website);
+                  console.log(response[0])  
+                  res.render("index", hbsObject);
+                //   console.log(hbsObject);
+                //   console.log(db.Website)
             })
         });
     }

@@ -8,11 +8,11 @@ $("#add-btn").on("click", function(event) {
   // make a new website obj
   var newWebsite = {
     // name from name input
-    header: $("#header").val().trim(),
+    title: $("#title").val().trim(),
     // role from role input
-    body: $("#body").val().trim(),
+    tagline: $("#tagline").val().trim(),
     // age from age input
-    footer: $("#footer").val().trim(),
+    block_1_head: $("#block1head").val().trim(),
   };
   console.log(newWebsite)
 

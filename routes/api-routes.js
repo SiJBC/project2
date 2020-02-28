@@ -25,14 +25,10 @@ module.exports = function (app) {
 
 
     app.post("/api/website", function (req, res){
-        console.log(req.body.header, req.body.body, req.body.footer)
         // enter in the user information to the database
-        db.Website.create({
-            header: req.body.header,
-            body: req.body.body,
-            footer:req.body.foooter
-        }).then(function(dbWebsite){
+        db.Website.create(req.body).then(function(dbWebsite){
             res.json(dbWebsite)
+            console.log(dbWebsite)
          
         })
     })
