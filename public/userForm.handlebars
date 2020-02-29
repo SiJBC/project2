@@ -9,16 +9,22 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <style>
+    .hiddenLink {
+      visibility: hidden;
+    } 
+  </style>
 
 </head>
 
 <body>
 
   <div class="container">
-    <div class="jumbotron" class="btn btn-danger btn-lg">
+    <div class="jumbotron">
+      <hr>
+      <a href= "/dev/{{userId}}" class="btn btn-danger btn-lg" class ="hiddenLink">
+     See website</a>
     </div>
-
-    <a class = "websiteLink">See Website </a>
     <div class="row">
 
       <div class="col-lg-12">

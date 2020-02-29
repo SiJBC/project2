@@ -14,23 +14,42 @@ module.exports = function (app) {
 
     app.get("/form", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/userForm.html"));
-    });
+    }); 
+
+    app.get("/render", function (req, res){
+        db.Website.findOne({
+            where: { 
+                id:req.params.id
+            }
+        }).then(function(response){
+            console.log(response)
+            var hbsObject = {
+                website: response[0].dataValues
+            }
+            // console.log(id)  
+            res.render("index", hbsObject)
+        })   
+       
+    })
 
 
 // load website from user specs
     // app.get("/dev", function (req, res) {
     // res.render(path.join(__dirname, "../views/index.handlebars") {
-        app.get("/dev", function(req, res) {
-                db.Website.findAll({
-                //  inclde: [db.Website]   
-            }).then(function(response) {
-                var hbsObject = {
-                    website: response[0].dataValues
-                  };
-                  console.log(response[0])  
-                  res.render("index", hbsObject);
-                //   console.log(hbsObject);
-                //   console.log(db.Website)
-            })
-        });
-    }
+    app.get("/dev/:id", function(req, res) {
+        db.Website.findOne({
+            where: {
+                id: req.params.id
+            }
+            //  inclde: [db.Website]   
+        }).then(function(response) {
+            var hbsObject = {
+                website: response[0]
+                };
+                console.log(response[0])  
+                res.render("index", hbsObject);
+            //   console.log(hbsObject);
+            //   console.log(db.Website)
+        })
+    });
+}
