@@ -16,11 +16,11 @@ module.exports = function (sequelize, DataTypes) {
       }
     },
     header_image: {
-      type: DataTypes.BLOB,
+      type: DataTypes.STRING,
       allowNull: true,
     },
     block_1_image: {
-      type: DataTypes.BLOB,
+      type: DataTypes.STRING,
       allowNull: true,
     },
     block_1_head: {
@@ -32,7 +32,7 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: true,
     },
     block_2_image: {
-      type: DataTypes.BLOB,
+      type: DataTypes.STRING,
       allowNull: true,
     },
     block_2_head: {
@@ -47,7 +47,7 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: true,
     },
     block_3_image: {
-      type: DataTypes.BLOB,
+      type: DataTypes.STRING,
       allowNull: true,
     },
     block_3_head: {

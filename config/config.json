@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "password",
+    "password": "1pNut7skwirels",
     "database": "one_page_man_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
