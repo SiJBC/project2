@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
     <!-- Compressed CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- CSS -->
@@ -22,17 +23,17 @@
     <nav>
         <div class="nav-wrapper">
             <a href="#" class="brand-logo">
-                <i class="fa fa-hand-pointer-o">One Page Man</i></a>
+                <i class="fa fa-hand-pointer-o"></i>One Page Man</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#">Guide</a></li>
                 <li><a href="#">Features</a></li>
-                <li><a href="#">Log in</a></li>
+                <li><a href="#">Guide</a></li>
+                <li><a href="#" id="login">Log in</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- this div will show after 'log in' has been clicked -->
-    <nav style="display: none">
+    <nav id="userLoginDiv" hidden>
         <div class="nav-wrapper">
             <div class="row">
                 <form class="col s6">
@@ -52,54 +53,98 @@
     </nav>
 
     <div style="display: block">
-        description about what we do, and how the user can use this app
+        <header class="bgimg">
+            <div class="col s12 header">
+                One Page Man
+            </div>
+        </header>
+    </div>
+    <div class="col s12 feature">
+        <h4>Create your own website by just clicks!</h4>
+        <p>
+            What we do? We can help you to create your website by just simple clicks.
+        </p>
+    </div>
+    <div class="photoGroup">
+        <p class="theme">Choose your theme</p>
+        <img class="col s4 images" id="mountain" src="image/mountain.jpg" alt="mountain">
+        <img class="col s4 images" id="sunset" src="image/sunset1.jpg" alt="sunset">
+        <img class="col s4 images" id="forest" src="image/forest.jpg" atl="forest">
     </div>
 
-    <div class="container" style="display: block">
-        <div class="row">
+    <div class="container" id="webCreateForm">
+        <div class="row" id="formRow">
             <div class="col m6" id="choiceWindow">
                 <form>
                     <h6 id="choiceTitle">
                         Add the things that you would like to display in the website
                     </h6>
+                    <hr>
                     <ul>
-                        <li class="userChoice">
+                        <li class="userChoice" id="title">
                             Title
                             <!-- when the add button clicked, the info will be recored and save to db, and move to right side -->
-                            <button type="submit" class="waves-effect waves-light btn btnList">add</button>
+                            <button type="submit" class="waves-effect waves-light btn btnList">
+                                <i class="fa fa-plus"></i>
+                            </button>
                         </li>
-                        <li class="userChoice">
+                        <li class="userChoice" id="tagline">
                             Tagline
-                            <button type="submit" class="waves-effect waves-light btn btnList">add</button>
+                            <button type="submit" class="waves-effect waves-light btn btnList">
+                                <i class="fa fa-plus"></i>
+                            </button>
                         </li>
-                        <li class="userChoice">
-                            Descriptions
-                            <button type="submit" class="waves-effect waves-light btn btnList">add</button>
+                        <li class="userChoice" id="descriptions">
+                            Orgnisation Descriptions
+                            <button type="submit" class="waves-effect waves-light btn btnList">
+                                <i class="fa fa-plus"></i>
+                            </button>
                         </li>
-                        <li class="userChoice">
-                            Products/services (Maxium 3)
-                            <button type="submit" class="waves-effect waves-light btn btnList">add</button>
+                        <li class="userChoice" id="proSer">
+                            Products/services Descriptions
+                            <button type="submit" class="waves-effect waves-light btn btnList">
+                                <i class="fa fa-plus"></i>
+                            </button>
                         </li>
-                        <li class="userChoice">
+                        <li class="userChoice" id="contact">
                             Contact details
-                            <button type="submit" class="waves-effect waves-light btn btnList">add</button>
+                            <button type="submit" class="waves-effect waves-light btn btnList">
+                                <i class="fa fa-plus"></i>
+                            </button>
                         </li>
                 </form>
             </div>
             <div class="col m6" id="confirmWindow">
-                <form>
-                    <div class="input-field">
+                <form id="userForm" class="row">
+                    <div class="input-field col m12">
                         <input id="websiteName" type="text" class="validate">
                         <label for="websiteName">Website Name</label>
                     </div>
-                    <ul>
-                        <li>
+
+                    <ul id="userConfirmTable" class="col m12">
+                        <!-- <li>
+                            <select class="browser-default col s4"> -->
+                        <!-- <option value="" disabled selected>Choose your option</option> -->
+                        <!-- <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <div class="input-field col s8">
+                                <input id="websiteName" type="text" class="validate">
+                            </div>
+                        </li> -->
+                        <!-- <li class="row">
+                            <div class="input-field col s10">
+                                <input type="text">
+                                <label for="titleName">Title Name</label>
+                            </div>
+                            <button class="col s2 waves-effect waves-light btn btnRemove">R</button> -->
+                        <!-- </li> -->
+                        <!-- <li hidden>
                             Things that need to confirmed
-                            <!-- remove button to remove from db -->
                             <button type="submit" class="waves-effect waves-light btn btnDown">
                                 <i class="fa fa-chevron-down"></i></button>
                             <button type="submit" class="waves-effect waves-light btn btnRemove">remove</button>
-                            <!-- when arrowdown has been clicked, show below list -->
                             <div id="cardForm" style="display: block">
                                 <div class="input-field">
                                     <input id="titleName" type="text" class="validate">
@@ -110,23 +155,10 @@
                                     <label for="content">Content</label>
                                 </div>
                                 <div class="form-group">
-                                    <!-- <label for="exampleFormControlFile1">Upload image</label> -->
                                     <input id="photoUpload" type="file" class="form-control-file">
                                 </div>
                             </div>
-                        </li>
-                        <li>
-                            Things that need to confirmed
-                            <button type="submit" class="waves-effect waves-light btn btnDown">
-                                <i class="fa fa-chevron-down"></i></button>
-                            <button type="submit" class="waves-effect waves-light btn btnRemove">remove</button>
-                        </li>
-                        <li>
-                            Things that need to confirmed
-                            <button type="submit" class="waves-effect waves-light btn btnDown">
-                                <i class="fa fa-chevron-down"></i></button>
-                            <button type="submit" class="waves-effect waves-light btn btnRemove">remove</button>
-                        </li>
+                        </li> -->
                     </ul>
                 </form>
                 <div id="submitSection">
@@ -145,7 +177,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Compressed JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- <script src="assets/javascript/javaScript01.js"></script> -->
+    <script src="js/index.js"></script>
     <!-- <script src="assets/javascript/index-page-js.js"></script> -->
 </body>
 

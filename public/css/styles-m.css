@@ -1,16 +1,25 @@
 .footer {
-    background-color: #d6d6d6;
-    position: fixed;
+    background-color: #242e36;
+    color: white;
+    font-family: 'Fjalla One';
+    /* position: fixed; */
     width: 100%;
     bottom: 0;
     text-align: center;
+    padding-top: 0.2rem;
+    padding-bottom: 0.1rem;
+
 }
 
 #choiceWindow,
 #confirmWindow {
     border-right: -1rem;
     border: #7a7a7a 0.1rem solid;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
+}
+
+#formRow {
+    margin-bottom: 4rem;
 }
 
 /* #choiceTitle {
@@ -32,10 +41,16 @@ li {
 }
 
 .nav-wrapper {
-    background-color: #7a7a7a;
+    background-color: #242e36;
+    font-family: 'Fjalla One';
 }
 
-.btnDown {
+.fa-hand-pointer-o {
+    margin-left: 1rem;
+}
+
+.btnDown,
+.btnPlus {
     position: absolute;
     right: 22rem;
 }
@@ -47,4 +62,80 @@ li {
 
 #submitSection {
     margin-bottom: 1.5rem;
+}
+
+.btnDelete {
+    margin-top: 1rem;
+}
+
+.bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url("../image/header.jpg");
+    min-height: 75%;
+}
+
+.header {
+    text-align: center;
+    font-size: 7rem;
+    padding: 15rem 0 15rem 0;
+    color: #242e36;
+    font-family: 'Fjalla One';
+}
+
+.feature {
+    text-align: center;
+    margin-bottom: 15rem;
+    margin-top: 3rem;
+}
+
+#choiceTitle,
+#submitSection,
+.theme {
+    font-family: 'Fjalla One';
+    font-size: 1.3rem;
+}
+
+.userConfirmList {
+    margin-bottom: 1rem;
+}
+
+.photoGroup {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.images {
+    width: 25.5rem;
+    opacity: 0.5;
+    border-radius: 0.5rem;
+}
+
+.images:hover {
+    opacity: 1;
+}
+
+#moutain {
+    background-color: #063845;
+    color: #076f8a;
+    color: #6f9aa6;
+    color: #06191f;
+}
+
+#sunset {
+    color: #6e1314;
+    color: #e74314;
+    color: #fb8914;
+    color: #400b13;
+}
+
+#forest {
+    color: #c3ce6a;
+    color: #9caa1e;
+    color: #566231;
+    color: #40462b;
+}
+
+.browser-default {
+    margin-top: 1rem;
 }
