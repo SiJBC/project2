@@ -6,7 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>One-page-man</title>
+    <title id="title">
+
+    </title>
     <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -20,42 +22,11 @@
 </head>
 
 <body>
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo">
-                <i class="fa fa-hand-pointer-o"></i>One Page Man</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Guide</a></li>
-                <li><a href="#" id="login">Log in</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- this div will show after 'log in' has been clicked -->
-    <nav id="userLoginDiv" hidden>
-        <div class="nav-wrapper">
-            <div class="row">
-                <form class="col s6">
-                    <div class="row">
-                        <div class="input-field col s6">
-                            <input id="email" type="text" class="validate">
-                            <label for="email">Email</label>
-                        </div>
-                        <div class="input-field col s6">
-                            <input id="password" type="text" class="validate">
-                            <label for="password">Password</label>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </nav>
 
     <div style="display: block">
         <header class="bgimg">
             <div class="col s12 header">
-                One Page Man
+                title
             </div>
         </header>
     </div>
@@ -67,22 +38,9 @@
     </div>
     <div class="photoGroup">
         <p class="theme">Choose your theme</p>
-        <div class="card-body">
-            <form action="" method="POST" role="form">
-                <input type="radio" id="mImg">
-                <label for="img1">
-                    <img class="col s4 images" id="mountain" src="image/mountain.jpg" alt="mountain">
-                </label>
-                <input type="radio" id="sImg">
-                <label for="img2">
-                    <img class="col s4 images" id="sunset" src="image/sunset1.jpg" alt="sunset">
-                </label>
-                <input type="radio" id="fImg">
-                <label for="img3">
-                    <img class="col s4 images" id="forest" src="image/forest.jpg" atl="forest">
-                </label>
-            </form>
-        </div>
+        <img class="col s4 images" id="mountain" src="image/mountain.jpg" alt="mountain">
+        <img class="col s4 images" id="sunset" src="image/sunset1.jpg" alt="sunset">
+        <img class="col s4 images" id="forest" src="image/forest.jpg" atl="forest">
     </div>
 
     <div class="container" id="webCreateForm">
@@ -135,46 +93,7 @@
                     </div>
 
                     <ul id="userConfirmTable" class="col m12">
-                        <!-- <li>
-                            <select class="browser-default col s4"> -->
-                        <!-- <option value="" disabled selected>Choose your option</option> -->
-                        <!-- <option value="1">Option 1</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
-                            </select>
-                            <div class="input-field col s8">
-                                <input id="websiteName" type="text" class="validate">
-                            </div>
-                        </li> -->
-                        <!-- <li class="row">
-                            <div class="input-field col s10">
-                                <input type="text">
-                                <label for="titleName">Title Name</label>
-                            </div>
-                            <button class="col s2 waves-effect waves-light btn btnRemove">R</button> -->
-                        <!-- </li> -->
-                        <!-- <li hidden>
-                            Things that need to confirmed
-                            <button type="submit" class="waves-effect waves-light btn btnDown">
-                                <i class="fa fa-chevron-down"></i></button>
-                            <button type="submit" class="waves-effect waves-light btn btnRemove">remove</button>
-                            <div id="cardForm" style="display: block">
-                                <div class="input-field">
-                                    <input id="titleName" type="text" class="validate">
-                                    <label for="titleName">Title Name</label>
-                                </div>
-                                <div class="input-field">
-                                    <textarea id="textarea1" class="materialize-textarea"></textarea>
-                                    <label for="content">Content</label>
-                                </div>
-                                <div class="form-group">
-                                    <input id="photoUpload" type="file" class="form-control-file">
-                                </div>
-                            </div>
-                        </li> -->
                     </ul>
-                    <!-- <ul id="proSerUl">
-                    </ul> -->
                     <ul id="contactDetails">
                     </ul>
                 </form>

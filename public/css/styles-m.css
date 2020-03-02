@@ -116,24 +116,24 @@ li {
 }
 
 #moutain {
-    background-color: #063845;
+    /* background-color: #063845;
     color: #076f8a;
     color: #6f9aa6;
-    color: #06191f;
+    color: #06191f; */
 }
 
 #sunset {
-    color: #6e1314;
+    /* color: #6e1314;
     color: #e74314;
     color: #fb8914;
-    color: #400b13;
+    color: #400b13; */
 }
 
 #forest {
-    color: #c3ce6a;
+    /* color: #c3ce6a;
     color: #9caa1e;
     color: #566231;
-    color: #40462b;
+    color: #40462b; */
 }
 
 .browser-default {
