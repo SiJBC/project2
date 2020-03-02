@@ -2,6 +2,7 @@ $(document).ready(function () {
     $(".dropdown-trigger").dropdown();
     var checker = false;
 
+
     // login section and user choice section
     function userLogin() {
         $("#login").click(function () {
@@ -256,8 +257,9 @@ $(document).ready(function () {
             var imgId = $(this).attr("id");
             console.log(imgId);
 
-            var label = $(this).parent().siblings().attr("id");
-            console.log(label);
+            
+            // var label = $(this).parent().siblings().attr("id");
+            // console.log(label);
         })
     }
     selectPic();

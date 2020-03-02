@@ -115,6 +115,13 @@ li {
     opacity: 1;
 }
 
+.imageChose {
+    width: 25.5rem;
+    opacity: 1;
+    border-radius: 0.5rem;
+}
+
+
 #moutain {
     /* background-color: #063845;
     color: #076f8a;
