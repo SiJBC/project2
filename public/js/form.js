@@ -6,51 +6,125 @@ var headerimg = "";
 var block1img = "";
 var block2img = "";
 var block3img = "";
+
+
+
+
 // when user clicks add-btn
 $(document).ready(function () {
   // cloudinary.applyUploadWidget(document.getElementById('opener'), 
   // { cloudName: "onepageman", uploadPreset: "opmpreset" }, (error, result) => { });
 
+  // $(".image").click(function(){
+
+    // var myWidget = cloudinary.createUploadWidget({
+    //   cloudName: 'onepageman',
+    //   uploadPreset: 'opm_preset',
+    //   cropping: true
+    // }, (error, result) => {
+    //   if (!error && result && result.event === "success") {
+    //     console.log('Done! Here is the image info: ', result.info);
+    //     console.log("URL" + JSON.stringify(result.info.url));
+    //     headerimg = result.info.url;
+    //   }
+    // }
+    // )
+
+    // $("#upload_widget_header").on("click", function () {
+    //   myWidget.open();
+    // }, false);
+
+    // document.getElementById("#upload_widget_header").addEventListener("click", function () {
+    //   myWidget.open();
+    // }, false);
+
 
   $('#upload_widget_header').cloudinary_upload_widget({
-    cloudName: "onepunchman", uploadPreset: "opm_preset", apiKey: 795943177824595,
-    cropping: true
+    cloudName: "onepageman", uploadPreset: "opm_preset", 
+    cropping: true, 
+    //resource_type: 'image'
+    // , gravity: "custom", croppingShowDimensions: true, maxImageFileSize: 1000000
   }, (error, result) => {
     // console.log("error: " + error);
     // console.log("result: " + JSON.stringify(result));
-    headerimg = result.info.files[0].uploadInfo.url;
-    console.log("headerimg url: " + headerimg);
+
+    if (error) {
+      console.log("error");
+      throw new error;
+    }
+    else if (!error && result && result.event === "success") {
+      //console.log("status: " + result.info.files[0].status);
+      console.log("URL" + JSON.stringify(result.info.url));
+      headerimg = result.info.url;
+      //  headerimg = result.info.files[0].uploadInfo.url;
+      // console.log("block1 url: " + block1img);
+    }
+
+    // console.log("headerimg url: " + headerimg);
   });
 
   $('#upload_widget_block1').cloudinary_upload_widget({
-    cloudName: "onepunchman", uploadPreset: "opm_preset", apiKey: 795943177824595,
+    cloudName: "onepageman", uploadPreset: "opm_preset", 
     cropping: true
   }, (error, result) => {
     // console.log("error: " + error);
     // console.log("result: " + JSON.stringify(result));
-    block1img = result.info.files[0].uploadInfo.url;
-    console.log("block1 url: " + headerimg);
+    if (error) {
+      console.log("error");
+      throw new error;
+    }
+    else if (!error && result && result.event === "success") {
+      //console.log("status: " + result.info.files[0].status);
+      console.log("result---------------------- " + JSON.stringify(result.info.url));
+      block1img = result.info.url;
+      // console.log("block1 url: " + block1img);
+    }
+
   });
 
   $('#upload_widget_block2').cloudinary_upload_widget({
-    cloudName: "onepunchman", uploadPreset: "opm_preset", apiKey: 795943177824595,
+    cloudName: "onepageman", uploadPreset: "opm_preset", 
     cropping: true
   }, (error, result) => {
     // console.log("error: " + error);
     // console.log("result: " + JSON.stringify(result));
-    block2img = result.info.files[0].uploadInfo.url;
-    console.log("block2 url: " + headerimg);
+    if (error) {
+      console.log("error");
+      throw new error;
+    }
+    else if (!error && result && result.event === "success") {
+      //console.log("status: " + result.info.files[0].status);
+      console.log("result---------------------- " + JSON.stringify(result.info.url));
+      block2img = result.info.url;
+      // console.log("block1 url: " + block1img);
+    }
+
+    // console.log("block2 url: " + headerimg);
   });
 
   $('#upload_widget_block3').cloudinary_upload_widget({
-    cloudName: "onepunchman", uploadPreset: "opm_preset", apiKey: 795943177824595,
+    cloudName: "onepageman", uploadPreset: "opm_preset", 
     cropping: true
   }, (error, result) => {
     // console.log("error: " + error);
     // console.log("result: " + JSON.stringify(result));
-    block3img = result.info.files[0].uploadInfo.url;
-    console.log("block3 url: " + headerimg);
+    if (error) {
+      console.log("error");
+      throw new error;
+    }
+    else if (!error && result && result.event === "success") {
+      //console.log("status: " + result.info.files[0].status);
+      console.log("result---------------------- " + JSON.stringify(result.info.url));
+      block3img = result.info.url;
+      // console.log("block1 url: " + block1img);
+    }
+
+    //console.log("block3 url: " + headerimg);
   });
+
+
+  // });
+
 
   $(".websiteLink").hide();
 
