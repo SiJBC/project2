@@ -7,7 +7,8 @@ $(document).ready(function () {
     $(".dropdown-trigger").dropdown();
     var checker = false;
 
-    // login section and user choice section
+
+    //click to show login section and user choice section
     function userLogin() {
         $("#login").click(function () {
             event.preventDefault();
@@ -24,6 +25,8 @@ $(document).ready(function () {
         })
     }
     userLogin();
+
+
 
     //=======================================================
     // IMAGE UPLOADS
@@ -116,6 +119,7 @@ $(document).ready(function () {
 //====================================================================================================
 
 
+
     function userChoices() {
         $(".btnList").click(function () {
             event.preventDefault();
@@ -201,6 +205,7 @@ $(document).ready(function () {
     // CreateList - this populates the box on the right, that allows users to enter input
     //=================================================================================================================
 
+
     function createList(labelFor, textFor) {
         var userForm = $("#userConfirmTable");
         var createLi = $("<li>").addClass("col m12 userConfirmList");
@@ -209,6 +214,7 @@ $(document).ready(function () {
         var createBtn = $("<button>").addClass("col s2 waves-effect waves-light btn btnDelete");
         var createMinus = $("<i>").addClass("fa fa-minus");
 
+        //loop to create id
         for (var c = 0; c < createLi.length; c++) {
             var idNum = c;
         }
@@ -259,6 +265,7 @@ $(document).ready(function () {
         removeDiv(btnRemove);
     };
 
+    //user choose to add product/service or contact details
     function proSevContact(labelFor) {
         //create input and textarea
         var userForm = $("#contactDetails");
@@ -287,6 +294,7 @@ $(document).ready(function () {
             createLi.append(createBtnOne);
             createLi.append(createBtnTwo);
 
+            //new div created append into the existing div in html #contactDetails
             $("#contactDetails").click(addContact);
 
             function addContact() {
@@ -336,7 +344,8 @@ $(document).ready(function () {
             createBtnThree.append(iconPlus);
             createLi.append(createBtnThree);
             createLi.append(createBtnTwo);
-
+            
+            //new div created append into the existing div in html #contactDetails
             $("#contactDetails").click(addContact);
 
             function addContact() {
@@ -408,18 +417,35 @@ $(document).ready(function () {
             var imgId = $(this).attr("id");
             console.log(imgId);
 
-            var label = $(this).parent().siblings().attr("id");
-            console.log(label);
+            if (imgId == "mountain") {
+                var image = "#mountain";
+                show(image);
+            } else if (imgId == "sunset") {
+                var image = "#sunset";
+                show(image);
+            } else if (imgId == "forest") {
+                var image = "#forest";
+                show(image);
+            };
+            // var label = $(this).parent().siblings().attr("id");
+            // console.log(label);
         })
     }
     selectPic();
 
+    //image opacity change to 1 when click, and other image opacity change to 0.5
+    function show(image) {
+        // console.log(image);
+        $(image).removeClass();
+        $(image).addClass("col s4 imageChose");
+        $(image).siblings().removeClass();
+        $(image).siblings().addClass("col s4 images");
+    }
     // function updateCountdown() {
     //     // 140 is the max message length
     //     var remaining = 140 - jQuery('.message').val().length;
     //     jQuery('.countdown').text(remaining + ' characters remaining.');
     // }
-
 
     // ** function to deal with the hide and show
 

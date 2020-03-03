@@ -1,0 +1,61 @@
+#submitSection {
+    margin-bottom: 1.5rem;
+}
+
+#header_image {
+    background-position: center;
+    background-size: cover;
+    background-image: url("../image/example.jpeg");
+    min-height: 75%;
+}
+
+.header {
+    text-align: center;
+    font-size: 7rem;
+    padding: 15rem 0 0 0;
+    color: #242e36;
+    font-family: 'Varela Round', sans-serif;
+}
+
+#tagline {
+    text-align: center;
+    padding-bottom: 15rem;
+    color: #242e36;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.descriptions {
+    text-align: center;
+    margin-bottom: 5rem;
+    margin-top: 3rem;
+    font-size: 1.8rem;
+}
+
+#mainBlocks {
+    margin-bottom: 5rem;
+}
+
+#contact {
+    background-color: #242e36;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    text-align: right;
+    padding-right: 25rem;
+    padding-top: 0.4rem;
+    margin-bottom: -1rem;
+}
+
+.browser-default {
+    margin-top: 1rem;
+}
+
+.footer {
+    background-color: #242e36;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    width: 100%;
+    bottom: 0;
+    padding-top: 0.2rem;
+    padding-bottom: 0.1rem;
+    text-align: center;
+}
