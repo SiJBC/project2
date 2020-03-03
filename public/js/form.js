@@ -40,8 +40,9 @@ $(document).ready(function () {
 
 
   $('#upload_widget_header').cloudinary_upload_widget({
-    cloudName: "onepageman", uploadPreset: "opm_preset", apiKey: 795943177824595,
-    cropping: true, resource_type: 'image'
+    cloudName: "onepageman", uploadPreset: "opm_preset", 
+    cropping: true, 
+    //resource_type: 'image'
     // , gravity: "custom", croppingShowDimensions: true, maxImageFileSize: 1000000
   }, (error, result) => {
     // console.log("error: " + error);
@@ -63,7 +64,7 @@ $(document).ready(function () {
   });
 
   $('#upload_widget_block1').cloudinary_upload_widget({
-    cloudName: "onepageman", uploadPreset: "opm_preset", apiKey: 795943177824595,
+    cloudName: "onepageman", uploadPreset: "opm_preset", 
     cropping: true
   }, (error, result) => {
     // console.log("error: " + error);
@@ -82,7 +83,7 @@ $(document).ready(function () {
   });
 
   $('#upload_widget_block2').cloudinary_upload_widget({
-    cloudName: "onepageman", uploadPreset: "opm_preset", apiKey: 795943177824595,
+    cloudName: "onepageman", uploadPreset: "opm_preset", 
     cropping: true
   }, (error, result) => {
     // console.log("error: " + error);
@@ -102,7 +103,7 @@ $(document).ready(function () {
   });
 
   $('#upload_widget_block3').cloudinary_upload_widget({
-    cloudName: "onepageman", uploadPreset: "opm_preset", apiKey: 795943177824595,
+    cloudName: "onepageman", uploadPreset: "opm_preset", 
     cropping: true
   }, (error, result) => {
     // console.log("error: " + error);
