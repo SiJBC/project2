@@ -1,3 +1,8 @@
+var headerimg = "";
+var block1img = "";
+var block2img = "";
+var block3img = "";
+
 $(document).ready(function () {
     $(".dropdown-trigger").dropdown();
     var checker = false;
@@ -21,7 +26,100 @@ $(document).ready(function () {
     }
     userLogin();
 
-    //user select what to add into website
+
+
+    //=======================================================
+    // IMAGE UPLOADS
+    //=======================================================
+
+    // Each widget maps to a button on the html page.
+    // It returns the URL of the stored image, in the variables defined at the top of this page.
+
+    $('#upload_widget_header').cloudinary_upload_widget({
+        cloudName: "onepageman", uploadPreset: "opm_preset", apiKey: 795943177824595,
+        cropping: true, resource_type: 'image'
+        // , gravity: "custom", croppingShowDimensions: true, maxImageFileSize: 1000000
+    }, (error, result) => {
+        // console.log("error: " + error);
+        // console.log("result: " + JSON.stringify(result));
+
+        if (error) {
+            console.log("error");
+            throw new error;
+        }
+        else if (!error && result && result.event === "success") {
+            //console.log("status: " + result.info.files[0].status);
+            console.log("URL" + JSON.stringify(result.info.url));
+            headerimg = result.info.url;
+
+        }
+
+
+    });
+
+    $('#upload_widget_block1').cloudinary_upload_widget({
+        cloudName: "onepageman", uploadPreset: "opm_preset", apiKey: 795943177824595,
+        cropping: true
+    }, (error, result) => {
+        // console.log("error: " + error);
+        // console.log("result: " + JSON.stringify(result));
+        if (error) {
+            console.log("error");
+            throw new error;
+        }
+        else if (!error && result && result.event === "success") {
+            //console.log("status: " + result.info.files[0].status);
+            console.log("result---------------------- " + JSON.stringify(result.info.url));
+            block1img = result.info.url;
+        }
+
+    });
+
+    $('#upload_widget_block2').cloudinary_upload_widget({
+        cloudName: "onepageman", uploadPreset: "opm_preset", apiKey: 795943177824595,
+        cropping: true
+    }, (error, result) => {
+        // console.log("error: " + error);
+        // console.log("result: " + JSON.stringify(result));
+        if (error) {
+            console.log("error");
+            throw new error;
+        }
+        else if (!error && result && result.event === "success") {
+            //console.log("status: " + result.info.files[0].status);
+            console.log("result---------------------- " + JSON.stringify(result.info.url));
+            block2img = result.info.url;
+        }
+
+    });
+
+    $('#upload_widget_block3').cloudinary_upload_widget({
+        cloudName: "onepageman", uploadPreset: "opm_preset", apiKey: 795943177824595,
+        cropping: true
+    }, (error, result) => {
+        // console.log("error: " + error);
+        // console.log("result: " + JSON.stringify(result));
+        if (error) {
+            console.log("error");
+            throw new error;
+        }
+        else if (!error && result && result.event === "success") {
+            //console.log("status: " + result.info.files[0].status);
+            console.log("result---------------------- " + JSON.stringify(result.info.url));
+            block3img = result.info.url;
+
+        }
+
+
+    });
+
+//====================================================================================================
+// UserChoices, the menu that allows users to select what parts to add
+// each click calls the createList() function 
+//====================================================================================================
+
+
+
     function userChoices() {
         $(".btnList").click(function () {
             event.preventDefault();
@@ -29,6 +127,7 @@ $(document).ready(function () {
             var parentId = $(this).parent().attr("id");
             // if the "title" clicked, add to the right-
             // -and with one box to fill in the title
+            console.log("btnlist pressed");
             if (parentId == "title") {
                 console.log("title to add");
                 var labelFor = "titleName";
@@ -45,19 +144,50 @@ $(document).ready(function () {
                 $("#taglineBtn").attr("disabled", true);
 
                 // if "descreption" add textarea to the right
-            } else if (parentId == "descriptions") {
-                console.log("descriptions to add");
-                var labelFor = "content";
-                var textFor = "Descriptions";
+            } else if (parentId == "block1Head") {
+                console.log("block1head to add");
+                var labelFor = "block1Head";
+                var textFor = "Sub-heading";
                 createList(labelFor, textFor);
-                $("#descriptionsBtn").attr("disabled", true);
+                $("#block1HeadBtn").attr("disabled", true);
 
-                // if "product/service" add title name, content and img div
-            } else if (parentId == "proSer") {
-                console.log("product and service to add");
-                var labelFor = "proSev";
-                proSevContact(labelFor);
-                $("#proSerBtn").attr("disabled", true);
+               
+            } else if (parentId == "block1Text") {
+                console.log("block1Text to add");
+                var labelFor = "block1text";
+                var textFor = "Text"
+                createList(labelFor, textFor);
+                $("#block1TextBtn").attr("disabled", true);
+
+            } else if (parentId == "block2Head") {
+                console.log("block2head to add");
+                var labelFor = "block2Head";
+                var textFor = "Sub-heading";
+                createList(labelFor, textFor);
+                $("#block2HeadBtn").attr("disabled", true);
+
+                
+            } else if (parentId == "block2Text") {
+                console.log("block2text to add");
+                var labelFor = "block2text";
+                var textFor = "Text"
+                createList(labelFor, textFor);
+                $("#block2TextBtn").attr("disabled", true);
+
+            } else if (parentId == "block3Head") {
+                console.log("block3head to add");
+                var labelFor = "block3Head";
+                var textFor = "Sub-heading";
+                createList(labelFor, textFor);
+                $("#block3HeadBtn").attr("disabled", true);
+
+                
+            } else if (parentId == "block3Text") {
+                console.log("block3text to add");
+                var labelFor = "block3text";
+                var textFor = "Text"
+                createList(labelFor, textFor);
+                $("#block3TextBtn").attr("disabled", true);
 
                 // if "contact details" add basic information, like phone, address and email
             } else if (parentId == "contact") {
@@ -71,7 +201,11 @@ $(document).ready(function () {
     }
     userChoices();
 
-    //user choose title/tagline/description return input or textarea
+    //=================================================================================================================
+    // CreateList - this populates the box on the right, that allows users to enter input
+    //=================================================================================================================
+
+
     function createList(labelFor, textFor) {
         var userForm = $("#userConfirmTable");
         var createLi = $("<li>").addClass("col m12 userConfirmList");
@@ -86,17 +220,37 @@ $(document).ready(function () {
         }
 
         if (labelFor == "titleName") {
-            var createInput = $("<input>").attr("type", "text");
+            var createInput = $("<input>").attr("type", "text").attr("id", "titleInput").attr("name", "titleInput");
             createBtn.attr("id", "titleBtnDel")
-            createLi.attr("id", "titleLi" + idNum);
+            // createLi.attr("id", "titleInput");
         } else if (labelFor == "tagLineName") {
-            var createInput = $("<input>").attr("type", "text");
+            var createInput = $("<input>").attr("type", "text").attr("id", "taglineInput").attr("name", "taglineInput");
             createBtn.attr("id", "tagBtnDel")
-            createLi.attr("id", "tagLi" + idNum);
-        } else if (labelFor == "content") {
-            var createInput = $("<textarea>").addClass("materialize-textarea");
-            createBtn.attr("id", "contentBtnDel");
-            createLi.attr("id", "contentLi" + idNum);
+            // createLi.attr("id", "taglineInput");
+        } else if (labelFor == "block1Head") {
+            var createInput = $("<input>").attr("type", "text").attr("id", "block1HeadInput").attr("name", "block1HeadInput");
+            createBtn.attr("id", "tagBtnDel")
+            // createLi.attr("id", "block1HeadInput");
+        } else if (labelFor == "block1text") {
+            var createInput = $("<input>").attr("type", "text").attr("id", "block1textInput").attr("name", "block1textInput");
+            createBtn.attr("id", "tagBtnDel")
+            // createLi.attr("id", "block1textInput");
+        } else if (labelFor == "block2Head") {
+            var createInput = $("<input>").attr("type", "text").attr("id", "block2HeadInput").attr("name", "block2HeadInput");
+            createBtn.attr("id", "tagBtnDel")
+            // createLi.attr("id", "block2HeadInput");
+        } else if (labelFor == "block2text") {
+            var createInput = $("<input>").attr("type", "text").attr("id", "block2textInput").attr("name", "block2textInput");
+            createBtn.attr("id", "tagBtnDel")
+            // createLi.attr("id", "block2textInput");
+        } else if (labelFor == "block3Head") {
+            var createInput = $("<input>").attr("type", "text").attr("id", "block3HeadInput").attr("name", "block3HeadInput");
+            createBtn.attr("id", "tagBtnDel")
+            // createLi.attr("id", "block3HeadInput");
+        } else if (labelFor == "block3text") {
+            var createInput = $("<input>").attr("type", "text").attr("id", "block3textInput").attr("name", "block3textInput");
+            createBtn.attr("id", "tagBtnDel")
+            // createLi.attr("id", "block3textInput");
         };
 
         createBtn.append(createMinus);
@@ -231,7 +385,7 @@ $(document).ready(function () {
 
     //remove btn function in the confirm list
     function removeDiv(btnRemove) {
-        $(btnRemove).click(function () {
+        $(btnRemove).click(function (event) {
             event.preventDefault();
             var btnId = $(this).attr("id");
             console.log(btnId);
@@ -294,4 +448,92 @@ $(document).ready(function () {
     // }
 
     // ** function to deal with the hide and show
+
+    //======================================================================================================
+    // This creates the object and does the AJAX call
+    //======================================================================================================
+
+    $(".btnConfirm").on("click", function (event) {
+         console.log("btnconfirm clicked");
+        console.log("titleInput: " + JSON.stringify($("#titleInput")));
+        event.preventDefault();
+    
+        var e = document.getElementById("titleInput");
+        console.log("e: " +e);
+        console.log("e.textcontent: " + e.textContent);
+        
+        let title1 = document.getElementsByName('titleInput')[0].value;
+        let tagline1 = document.getElementsByName('taglineInput')[0].value;
+        let block1Head1 = document.getElementsByName('block1HeadInput')[0].value;
+        let block1text1 = document.getElementsByName('block1textInput')[0].value;
+        let block2Head1 = document.getElementsByName('block2HeadInput')[0].value;
+        let block2text1 = document.getElementsByName('block2textInput')[0].value;
+        let block3Head1 = document.getElementsByName('block3HeadInput')[0].value;
+        let block3text1 = document.getElementsByName('block3textInput')[0].value;
+
+        console.log("title1: " + title1);
+        // make a new website obj
+        var newWebsite = {
+          // title
+          title: title1,
+          //$("#titleInput").val().trim(),
+          // tagline
+          tagline: tagline1, 
+          //$("#taglineInput")[0].val().trim(),
+          // header image
+          //header_image: headerimg,
+          // header_image: $("#header_image"),
+          // Block 1 Image
+          //block_1_image: block1img,
+          // block_1_image: $("#block_1_image"),
+          // block 1 header
+          block_1_head: block1Head1,
+          //$("#block1headInput").val().trim(),
+          // block 1 text
+          block_1_text: block1text1,
+          //$("#block1textInput").val().trim(),
+          // block 2 image
+          //block_2_image: block2img,
+          // block_2_image: $("#block_2_image"),
+          // block 2 header
+          block_2_head: block2Head1,
+          //$("#block2headInput").val().trim(),
+          // block 2 text
+          block_2_text: block2text1, 
+          //$("#block2textInput").val().trim(),
+          // block 3 image
+          //block_3_image: block3img,
+          // block_3_image: $("#block_3_image"),
+          // block 3 header
+          block_3_head: block3Head1,
+          //$("#block3headInput").val().trim(),
+          // block 3 text
+          block_3_text: block3text1
+          //$("#block3textInput").val().trim(),
+          // E-mail
+        //   e_mail: $("#eMail").val().trim(),
+        //   // Location
+        //   place_location: $("#placeLocation").val().trim()
+        };
+        console.log(newWebsite)
+    
+        // send an AJAX POST-request with jQuery
+        $.post("/api/website", newWebsite)
+          // console.log(newWebsite)
+          // on success, run this callback
+          .then(function (data) {
+            // log the data we found
+            console.log(data);
+            // tell the user we're adding a character with an alert window
+            alert("generating website...");
+    
+            // Use jQuery.update link
+            $(".websiteLink").show()
+            $(".websiteLink").attr("href", "/dev/" + data.id)
+          });
+    
+        // empty each input box by replacing the value with an empty string
+      });
+
+
 });
