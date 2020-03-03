@@ -214,35 +214,35 @@ $(document).ready(function () {
         }
 
         if (labelFor == "titleName") {
-            var createInput = $("<input>").attr("type", "text").attr("id", "titleInput");
+            var createInput = $("<input>").attr("type", "text").attr("id", "titleInput").attr("name", "titleInput");
             createBtn.attr("id", "titleBtnDel")
             // createLi.attr("id", "titleInput");
         } else if (labelFor == "tagLineName") {
-            var createInput = $("<input>").attr("type", "text").attr("id", "taglineInput");
+            var createInput = $("<input>").attr("type", "text").attr("id", "taglineInput").attr("name", "taglineInput");
             createBtn.attr("id", "tagBtnDel")
             // createLi.attr("id", "taglineInput");
         } else if (labelFor == "block1Head") {
-            var createInput = $("<input>").attr("type", "text").attr("id", "block1HeadInput");
+            var createInput = $("<input>").attr("type", "text").attr("id", "block1HeadInput").attr("name", "block1HeadInput");
             createBtn.attr("id", "tagBtnDel")
             // createLi.attr("id", "block1HeadInput");
         } else if (labelFor == "block1text") {
-            var createInput = $("<input>").attr("type", "text").attr("id", "block1textInput");
+            var createInput = $("<input>").attr("type", "text").attr("id", "block1textInput").attr("name", "block1textInput");
             createBtn.attr("id", "tagBtnDel")
             // createLi.attr("id", "block1textInput");
         } else if (labelFor == "block2Head") {
-            var createInput = $("<input>").attr("type", "text").attr("id", "block2HeadInput");
+            var createInput = $("<input>").attr("type", "text").attr("id", "block2HeadInput").attr("name", "block2HeadInput");
             createBtn.attr("id", "tagBtnDel")
             // createLi.attr("id", "block2HeadInput");
         } else if (labelFor == "block2text") {
-            var createInput = $("<input>").attr("type", "text").attr("id", "block2textInput");
+            var createInput = $("<input>").attr("type", "text").attr("id", "block2textInput").attr("name", "block2textInput");
             createBtn.attr("id", "tagBtnDel")
             // createLi.attr("id", "block2textInput");
         } else if (labelFor == "block3Head") {
-            var createInput = $("<input>").attr("type", "text").attr("id", "block3HeadInput");
+            var createInput = $("<input>").attr("type", "text").attr("id", "block3HeadInput").attr("name", "block3HeadInput");
             createBtn.attr("id", "tagBtnDel")
             // createLi.attr("id", "block3HeadInput");
         } else if (labelFor == "block3text") {
-            var createInput = $("<input>").attr("type", "text").attr("id", "block3textInput");
+            var createInput = $("<input>").attr("type", "text").attr("id", "block3textInput").attr("name", "block3textInput");
             createBtn.attr("id", "tagBtnDel")
             // createLi.attr("id", "block3textInput");
         };
@@ -376,7 +376,7 @@ $(document).ready(function () {
 
     //remove btn function in the confirm list
     function removeDiv(btnRemove) {
-        $(btnRemove).click(function () {
+        $(btnRemove).click(function (event) {
             event.preventDefault();
             var btnId = $(this).attr("id");
             console.log(btnId);
@@ -436,41 +436,58 @@ $(document).ready(function () {
         console.log("e: " +e);
         console.log("e.textcontent: " + e.textContent);
         
-    
+        let title1 = document.getElementsByName('titleInput')[0].value;
+        let tagline1 = document.getElementsByName('taglineInput')[0].value;
+        let block1Head1 = document.getElementsByName('block1HeadInput')[0].value;
+        let block1text1 = document.getElementsByName('block1textInput')[0].value;
+        let block2Head1 = document.getElementsByName('block2HeadInput')[0].value;
+        let block2text1 = document.getElementsByName('block2textInput')[0].value;
+        let block3Head1 = document.getElementsByName('block3HeadInput')[0].value;
+        let block3text1 = document.getElementsByName('block3textInput')[0].value;
+
+        console.log("title1: " + title1);
         // make a new website obj
         var newWebsite = {
           // title
-          title: $("#titleInput").val().trim(),
+          title: title1,
+          //$("#titleInput").val().trim(),
           // tagline
-          tagline: $("#taglineInput").val().trim(),
+          tagline: tagline1, 
+          //$("#taglineInput")[0].val().trim(),
           // header image
-          header_image: headerimg,
+          //header_image: headerimg,
           // header_image: $("#header_image"),
           // Block 1 Image
-          block_1_image: block1img,
+          //block_1_image: block1img,
           // block_1_image: $("#block_1_image"),
           // block 1 header
-          block_1_head: $("#block1headInput").val().trim(),
+          block_1_head: block1Head1,
+          //$("#block1headInput").val().trim(),
           // block 1 text
-          block_1_text: $("#block1textInput").val().trim(),
+          block_1_text: block1text1,
+          //$("#block1textInput").val().trim(),
           // block 2 image
-          block_2_image: block2img,
+          //block_2_image: block2img,
           // block_2_image: $("#block_2_image"),
           // block 2 header
-          block_2_head: $("#block2headInput").val().trim(),
+          block_2_head: block2Head1,
+          //$("#block2headInput").val().trim(),
           // block 2 text
-          block_2_text: $("#block2textInput").val().trim(),
+          block_2_text: block2text1, 
+          //$("#block2textInput").val().trim(),
           // block 3 image
-          block_3_image: block3img,
+          //block_3_image: block3img,
           // block_3_image: $("#block_3_image"),
           // block 3 header
-          block_3_head: $("#block3headInput").val().trim(),
+          block_3_head: block3Head1,
+          //$("#block3headInput").val().trim(),
           // block 3 text
-          block_3_text: $("#block3textInput").val().trim(),
+          block_3_text: block3text1
+          //$("#block3textInput").val().trim(),
           // E-mail
-          e_mail: $("#eMail").val().trim(),
-          // Location
-          place_location: $("#placeLocation").val().trim()
+        //   e_mail: $("#eMail").val().trim(),
+        //   // Location
+        //   place_location: $("#placeLocation").val().trim()
         };
         console.log(newWebsite)
     
