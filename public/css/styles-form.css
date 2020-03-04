@@ -2,10 +2,10 @@
     margin-bottom: 1.5rem;
 }
 
-#header_image {
+#headerimg {
     background-position: center;
     background-size: cover;
-    background-image: url("../image/example.jpeg");
+    /* background-image: url("../image/example.jpeg"); */
     min-height: 75%;
 }
 

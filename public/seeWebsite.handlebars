@@ -1,11 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-us">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <a href = "/dev/{{userId}}"> See Website </a>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title id="title">
+        {{title}}
+    </title>
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+    <!-- Compressed CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" id="theme" href="styles-form.css" type="text/css">
+    <a href="/dev/{{userId}}"> Your website </a>
 </head>
+
 <body>
+    <div>
+        <header id="headerimg">
+            <div class="col s12 header" id="title">
+                {{title}}
+            </div>
+            <p id="tagline">
+                {{tagline}}
+            </p>
+        </header>
+    </div>
+    <div class="container" id="mainBlocks">
+        <div class="row" id="formRow">
+            <div class="col m4" id="block_1">
+                <div class="col s12">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="{{block_1_image}}" id="block_1_image">
+                            <span class="card-title" id="block1head">{{block_1_head}}</span>
+                        </div>
+                        <div class="card-content" id="block1text">
+                            <p>{{block_1_text}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col m4" id="block_2">
+                <div class="col s12">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="image/sunset1.jpg" id="block_1_image">
+                            <span class="card-title" id="block_1_head">Product/Service</span>
+                        </div>
+                        <div class="card-content" id="block_1_text">
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col m4" id="block_3">
+                <div class="col s12">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="image/forest1.jpg" id="block_1_image">
+                            <span class="card-title" id="block_1_head">Product/Service</span>
+                        </div>
+                        <div class="card-content" id="block_1_text">
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <p id="phone">phone</p>
+        <p id="eMail">email</p>
+        <p id="placeLocation">address</p>
+    </div>
+
+    <div class="footer">
+        <p>Title Copyright &copy; 2020</p>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Compressed JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/index.js"></script>
+    <!-- <script src="assets/javascript/index-page-js.js"></script> -->
+
 </body>
+
 </html>
