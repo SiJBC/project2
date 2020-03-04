@@ -5,6 +5,7 @@ var block3img = "";
 var titleAdd = false, taglineAdd = false, block1HeadAdd = false, block2HeadAdd = false, block3HeadAdd = false, block1TextAdd = false, block2TextAdd = false, block3TextAdd = false, eMailAdd = false, phoneAdd = false, placeLocationAdd = false;
 
 $(document).ready(function () {
+    $(".websiteLink").hide();
     $(".dropdown-trigger").dropdown();
     var checker = false;
 

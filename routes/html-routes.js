@@ -36,20 +36,20 @@ module.exports = function (app) {
 // load website from user specs
     // app.get("/dev", function (req, res) {
     // res.render(path.join(__dirname, "../views/index.handlebars") {
-    app.get("/dev/:id", function(req, res) {
-        db.Website.findOne({
-            where: {
-                id: req.params.id
-            }
-            //  inclde: [db.Website]   
-        }).then(function(response) {
-            var hbsObject = {
-                website: response[0]
-                };
-                console.log(response[0])  
-                res.render("index", hbsObject);
-            //   console.log(hbsObject);
-            //   console.log(db.Website)
+        app.get("/dev/:id", function(req, res) {
+            db.Website.findOne({
+                where: {
+                    id: req.params.id
+                }
+                //  inclde: [db.Website]   
+            }).then(function(response) {
+                var hbsObject = {
+                    website: response.dataValues
+                    };
+                    console.log(hbsObject)  
+                    res.render("index", hbsObject);
+                //   console.log(hbsObject);
+                //   console.log(db.Website)
         })
     });
 }
