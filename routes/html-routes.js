@@ -13,7 +13,7 @@ module.exports = function (app) {
 
 
     app.get("/form", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/userForm.html"));
+    res.sendFile(path.join(__dirname, "../public/index-m.html"));
     }); 
 
     app.get("/render", function (req, res){
