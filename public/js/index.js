@@ -274,7 +274,7 @@ $(document).ready(function () {
             // createLi.attr("id", "block2HeadInput");
         } else if (labelFor == "block2text") {
             var createInput = $("<input>").attr("type", "text").attr("id", "block2textInput").attr("name", "block2textInput");
-            createBtn.attr("id", "block2textBtnDel")
+            createBtn.attr("id", "block2TextBtnDel")
             // createLi.attr("id", "block2textInput");
         } else if (labelFor == "block3Head") {
             var createInput = $("<input>").attr("type", "text").attr("id", "block3HeadInput").attr("name", "block3HeadInput");
@@ -282,7 +282,7 @@ $(document).ready(function () {
             // createLi.attr("id", "block3HeadInput");
         } else if (labelFor == "block3text") {
             var createInput = $("<input>").attr("type", "text").attr("id", "block3textInput").attr("name", "block3textInput");
-            createBtn.attr("id", "block3textBtnDel")
+            createBtn.attr("id", "block3TextBtnDel")
             // createLi.attr("id", "block3textInput");
         } else if (labelFor == "eMail") {
             var createInput = $("<input>").attr("type", "text").attr("id", "eMailInput").attr("name", "eMailInput");
@@ -437,36 +437,47 @@ $(document).ready(function () {
 
             if (btnId == "titleBtnDel") {
                 $("#titleBtn").attr("disabled", false);
+                titleAdd = false;
                 $(this).parent().remove();
             } else if (btnId == "tagBtnDel") {
                 $("#taglineBtn").attr("disabled", false);
+                taglineAdd = false;
                 $(this).parent().remove();
             } else if (btnId == "block1HeadBtnDel") {
                 $("#block1HeadBtn").attr("disabled", false);
+                block1HeadAdd = false;
                 $(this).parent().remove();
             } else if (btnId == "block1TextBtnDel") {
                 $("#block1TextBtn").attr("disabled", false);
+                block1TextAdd = false;
                 $(this).parent().remove();
             } else if (btnId == "block2HeadBtnDel") {
                 $("#block2HeadBtn").attr("disabled", false);
+                block2HeadAdd = false;
                 $(this).parent().remove();
             } else if (btnId == "block2TextBtnDel") {
                 $("#block2TextBtn").attr("disabled", false);
+                block2TextAdd = false;
                 $(this).parent().remove();
             } else if (btnId == "block3HeadBtnDel") {
                 $("#block3HeadBtn").attr("disabled", false);
+                block3HeadAdd = false;
                 $(this).parent().remove();
             } else if (btnId == "block3TextBtnDel") {
                 $("#block3TextBtn").attr("disabled", false);
+                block3TextAdd = false;
                 $(this).parent().remove();
             } else if (btnId == "eMailBtnDel") {
                 $("#eMailBtn").attr("disabled", false);
+                eMailAdd = false;
                 $(this).parent().remove();
             } else if (btnId == "phoneBtnDel") {
                 $("#phoneBtn").attr("disabled", false);
+                phoneAdd = false;
                 $(this).parent().remove();
             } else if (btnId == "placeLocationBtnDel") {
                 $("#placeLocationBtn").attr("disabled", false);
+                placeLocationAdd = false;
                 $(this).parent().remove();
             }
         });
