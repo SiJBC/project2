@@ -1,24 +1,93 @@
-<h1></h1>
+{{!-- <h1></h1>
 
 <h2>newWebsite</h2>
 
+<a href="/dev/{{website.id}}">See Website</a>
+ --}}
 
-       <a href = "/dev/{{website.id}}">See Website</a>  
+<div>
+       <header id="header_image" style="background-image: url({{website.header_image}});">
+              <div class="col s12 header" id="title">
+                     {{website.title}}
+              </div>
+              <p id="tagline">
+                     {{website.tagline}}
+              </p>
+       </header>
+</div>
+<div class="container" id="mainBlocks">
+       <div class="row" id="formRow">
+              <div class="col m4" id="block_1">
+                     <div class="col s12">
+                            <div class="card">
+                                   <div class="card-image">
+                                          <img src="{{website.block_1_image}}" id="block_1_image">
+                                          <span class="card-title" id="block1head">{{website.block_1_head}}</span>
+                                   </div>
+                                   <div class="card-content" id="block1text">
+                                          <p>{{website.block_1_text}}</p>
+                                   </div>
+                            </div>
+                     </div>
+              </div>
+              <div class="col m4" id="block_2">
+                     <div class="col s12">
+                            <div class="card">
+                                   <div class="card-image">
+                                          <img src="{{website.block_2_image}}" id="block_2_image">
+                                          <span class="card-title" id="block_2_head">{{website.block_2_head}}</span>
+                                   </div>
+                                   <div class="card-content" id="block_2_text">
+                                          <p>{{website.block_2_text}}
+                                          </p>
+                                   </div>
+                            </div>
+                     </div>
+              </div>
+              <div class="col m4" id="block_3">
+                     <div class="col s12">
+                            <div class="card">
+                                   <div class="card-image">
+                                          <img src="{{website.block_3_image}}" id="block_3_image">
+                                          <span class="card-title" id="block_3_head">{{website.block_3_head}}</span>
+                                   </div>
+                                   <div class="card-content" id="block_3_text">
+                                          <p>{{website.block_3_text}}
+                                          </p>
+                                   </div>
+                            </div>
+                     </div>
+              </div>
+       </div>
+</div>
 
-      {{website.title}}
-      {{website.tagline}}
-      {{website.header_image}}
-      {{website.block_1_image}}
-      {{website.block_1_head}}
-      {{website.block_1_text}}
-      {{website.block_2_image}}
-      {{website.block_2_head}}
-      {{website.block_2_text}}
-      {{website.block_3_image}}
-      {{website.block_3_head}}
-      {{website.block_3_text}}
-      {{website.e_mail}}
-      {{website.place_location}}
+<div id="contact">
+       <p id="phone">phone</p>
+       <p id="eMail">{{website.e_mail}}</p>
+       <p id="placeLocation">{{website.place_location}}</p>
+</div>
 
+<div class="footer">
+       <p>{{website.title}} Copyright &copy; 2020</p>
+</div>
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Compressed JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+{{!-- <script src="/js/index.js"></script> --}}
+<!-- <script src="assets/javascript/index-page-js.js"></script> -->
 
+{{!-- {{website.title}}
+{{website.tagline}} --}}
+{{!-- {{website.header_image}} --}}
+{{!-- {{website.block_1_image}}
+{{website.block_1_head}}
+{{website.block_1_text}}
+{{website.block_2_image}}
+{{website.block_2_head}}
+{{website.block_2_text}}
+{{website.block_3_image}}
+{{website.block_3_head}}
+{{website.block_3_text}}
+{{website.e_mail}}
+{{website.place_location}} --}}
