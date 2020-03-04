@@ -31,7 +31,7 @@
             </ul>
         </div>
     </nav>
-    <a class = "websiteLink">See Website </a>
+
     <!-- this div will show after 'log in' has been clicked -->
     <nav id="userLoginDiv" hidden>
         <div class="nav-wrapper">
@@ -60,13 +60,12 @@
         </header>
     </div>
     <div class="col s12 feature">
-        <h4>Create your own website with just clicks!</h4>
+        <h4>Create your own website by just clicks!</h4>
         <p>
-
-
-            We can help you to create your website in just a few simple clicks.
-
-      </p>
+            What we do? We can help you to create your website by just simple clicks.
+            Simply choose one of the theme below, then add the things that you would like to display in the website.
+            If you change your mind, just remove it before the confirmation.
+        </p>
     </div>
     <div class="photoGroup">
         <p class="theme">Choose your theme</p>
@@ -85,35 +84,6 @@
                     <img class="col s4 images" id="forest" src="image/forest2.jpg" atl="forest">
                 <!-- </label> -->
             </form>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="form-group">
-                    <label for="">Header Image: </label>
-                    <input type="file" class="form-control image" id="upload_widget_header" name="header_image">
-                </div>
-
-                <div class="form-group">
-                    <label for="">Left Card Image: </label>
-                    <input type="file" class="form-control image" id="upload_widget_block1" name="header_image">
-                    <!-- <input type="file" class="form-control" id="block_1_image" name="block_1_image"> -->
-                </div>
-
-                <div class="form-group">
-                    <label for="">Middle Card Image</label>
-                    <input type="file" class="form-control image" id="upload_widget_block2" name="header_image">
-                    <!-- <input type="file" class="form-control" id="block_2_image" name="block_2_image"> -->
-                </div>
-
-                <div class="form-group">
-                    <label for="">Right Card Image: </label>
-                    <input type="file" class="form-control image" id="upload_widget_block3" name="header_image">
-                    <!-- <input type="file" class="form-control" id="block_3_image" name="block_3_image"> -->
-                </div>
-            </div>
         </div>
     </div>
 
@@ -139,65 +109,24 @@
                                 <i class="fa fa-plus"></i>
                             </button>
                         </li>
-                        <li class="userChoice" id="block1Head">
-                            Sub-Heading 1
-                            <button type="submit" class="waves-effect waves-light btn btnList" id="block1HeadBtn">
+                        <li class="userChoice" id="descriptions">
+                            Orgnisation Descriptions
+                            <button type="submit" class="waves-effect waves-light btn btnList" id="descriptionsBtn">
                                 <i class="fa fa-plus"></i>
                             </button>
                         </li>
-                        <li class="userChoice" id="block1Text">
-                            Sub-Text 1
-                            <button type="submit" class="waves-effect waves-light btn btnList" id="block1TextBtn">
+                        <li class="userChoice" id="proSer">
+                            Products/services Descriptions
+                            <button type="submit" class="waves-effect waves-light btn btnList" id="proSerBtn">
                                 <i class="fa fa-plus"></i>
                             </button>
                         </li>
-                        <li class="userChoice" id="block2Head">
-                            Sub-Heading 2
-                            <button type="submit" class="waves-effect waves-light btn btnList" id="block2HeadBtn">
-                                <i class="fa fa-plus"></i>
-                            </button>
-                        </li>
-                        <li class="userChoice" id="block2Text">
-                            Sub-Text 2
-                            <button type="submit" class="waves-effect waves-light btn btnList" id="block2TextBtn">
-                                <i class="fa fa-plus"></i>
-                            </button>
-                        </li>                        <li class="userChoice" id="block3Head">
-                            Sub-Heading 3
-                            <button type="submit" class="waves-effect waves-light btn btnList" id="block3HeadBtn">
-                                <i class="fa fa-plus"></i>
-                            </button>
-                        </li>
-                        <li class="userChoice" id="block3Text">
-                            Sub-Text 3
-                            <button type="submit" class="waves-effect waves-light btn btnList" id="block3TextBtn">
-                                <i class="fa fa-plus"></i>
-                            </button>
-                        </li>
-                        <li class="userChoice" id="eMail">
-                            E-mail
-                            <button type="submit" class="waves-effect waves-light btn btnList" id="eMailBtn">
-                                <i class="fa fa-plus"></i>
-                            </button>
-                        </li>
-                        <li class="userChoice" id="phone">
-                            Phone Number
-                            <button type="submit" class="waves-effect waves-light btn btnList" id="phoneBtn">
-                                <i class="fa fa-plus"></i>
-                            </button>
-                        </li>
-                        <li class="userChoice" id="placeLocation">
-                            Location
-                            <button type="submit" class="waves-effect waves-light btn btnList" id="placeLocationBtn">
-                                <i class="fa fa-plus"></i>
-                            </button>
-                        </li>
-                        <!-- <li class="userChoice" id="contact">
+                        <li class="userChoice" id="contact">
                             Contact details
                             <button type="submit" class="waves-effect waves-light btn btnList" id="contactBtn">
                                 <i class="fa fa-plus"></i>
                             </button>
-                        </li> -->
+                        </li>
                 </form>
             </div>
             <div class="col m6" id="confirmWindow">
@@ -218,27 +147,20 @@
                     <!-- once the confirm button has been clicked, a alert pop up -->
                     Create the website now
                     <button type="submit" class="waves-effect waves-light btn btnConfirm">Confirm</button>
-                    <a class = "websiteLink">See Website </a>
                 </div>
-
             </div>
         </div>
     </div>
-    
+
     <div class="footer">
         <p>One Page Man Copyright &copy; 2020</p>
     </div>
-    <!-- type="text/javascript"  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Compressed JavaScript -->
-    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
     <script src="js/index.js"></script>
-    
     <!-- <script src="assets/javascript/index-page-js.js"></script> -->
-
-
 </body>
 
 </html>

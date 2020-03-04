@@ -22,11 +22,6 @@
     margin-bottom: 4rem;
 }
 
-/* #choiceTitle {
-background-color: #7a7a7a;
-border-top-left-radius: 1rem;
-} */
-
 li {
     padding-bottom: 1rem;
 }
@@ -85,8 +80,9 @@ li {
 
 .feature {
     text-align: center;
-    margin-bottom: 15rem;
-    margin-top: 3rem;
+    /* margin-bottom: 15rem;
+    margin-top: 3rem; */
+    margin: 3rem 15rem 8rem 15rem;
 }
 
 #choiceTitle,
@@ -102,7 +98,7 @@ li {
 
 .photoGroup {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 
 .images {
@@ -121,28 +117,7 @@ li {
     border-radius: 0.5rem;
 }
 
-
-#moutain {
-    /* background-color: #063845;
-    color: #076f8a;
-    color: #6f9aa6;
-    color: #06191f; */
-}
-
-#sunset {
-    /* color: #6e1314;
-    color: #e74314;
-    color: #fb8914;
-    color: #400b13; */
-}
-
-#forest {
-    /* color: #c3ce6a;
-    color: #9caa1e;
-    color: #566231;
-    color: #40462b; */
-}
-
 .browser-default {
     margin-top: 1rem;
 }
+
