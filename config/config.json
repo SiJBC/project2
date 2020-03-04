@@ -1,11 +1,7 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
     "password": "Escape@2020",
-=======
-    "password": "1pNut7skwirels",
->>>>>>> 43726f01660efd39b7577cc9da665cbd7f5fdd1c
     "database": "one_page_man_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
