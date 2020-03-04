@@ -26,7 +26,9 @@ li {
     padding-bottom: 1rem;
 }
 .btnList {
-    position: absolute;
+    /* position: relative; */
+    position: static;
+    /* position: absolute; */
     right: 49rem;
 }
 
@@ -51,7 +53,8 @@ li {
 }
 
 .btnConfirm {
-    position: absolute;
+    float: right;
+    position: static;
     right: 17rem;
 }
 
@@ -121,3 +124,22 @@ li {
     margin-top: 1rem;
 }
 
+#imageCol1 {
+ 
+    text-align: right;
+    font-weight: bold;
+    color: black;
+
+}
+
+#imageCol2 {
+    
+    text-align: left;
+    font-weight: bold;
+    color: black;
+    
+}
+
+label {
+    color:black;
+}
