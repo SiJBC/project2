@@ -3,6 +3,7 @@ var block1img = "";
 var block2img = "";
 var block3img = "";
 var titleAdd = false, taglineAdd = false, block1HeadAdd = false, block2HeadAdd = false, block3HeadAdd = false, block1TextAdd = false, block2TextAdd = false, block3TextAdd = false, eMailAdd = false, phoneAdd = false, placeLocationAdd = false;
+var theme = "mountain";
 
 $(document).ready(function () {
     $(".websiteLink").hide();
@@ -12,7 +13,7 @@ $(document).ready(function () {
 
     //click to show login section and user choice section
     function userLogin() {
-        $("#login").click(function () {
+        $("#login").click(function (event) {
             event.preventDefault();
             console.log("clicked");
             if (checker == false) {
@@ -28,9 +29,30 @@ $(document).ready(function () {
     }
     userLogin();
 
-    //=======================================================
+    //===========================================================================================
+    // SELECT THEME
+    //===========================================================================================
+
+    function selectTheme() {
+        $(".images").click(function (event) {
+            event.preventDefault();
+            console.log("Theme Clicked");
+            console.log("id: " + $(this).attr("id"));
+            if ($(this).attr("id") === "mountain") {
+                theme = "mountain";
+            }
+            else if ($(this).attr("id") === "sunset") {
+                theme = "sunset";
+            }
+            else if ($(this).attr("id") === "forest") {
+                theme = "forest";
+            }
+        });
+    }
+    selectTheme();
+    //===========================================================================================
     // IMAGE UPLOADS
-    //=======================================================
+    //===========================================================================================
 
     // Each widget maps to a button on the html page.
     // It returns the URL of the stored image, in the variables defined at the top of this page.
@@ -338,27 +360,27 @@ $(document).ready(function () {
     }
 
     // user choose themes
-    function selectPic() {
-        $(".images").click(function () {
-            event.preventDefault();
-            var imgId = $(this).attr("id");
-            console.log(imgId);
+    // function selectPic() {
+    //     $(".images").click(function () {
+    //         event.preventDefault();
+    //         var imgId = $(this).attr("id");
+    //         console.log(imgId);
 
-            if (imgId == "mountain") {
-                var image = "#mountain";
-                show(image);
-            } else if (imgId == "sunset") {
-                var image = "#sunset";
-                show(image);
-            } else if (imgId == "forest") {
-                var image = "#forest";
-                show(image);
-            };
-            // var label = $(this).parent().siblings().attr("id");
-            // console.log(label);
-        })
-    }
-    selectPic();
+    //         if (imgId == "mountain") {
+    //             var image = "#mountain";
+    //             show(image);
+    //         } else if (imgId == "sunset") {
+    //             var image = "#sunset";
+    //             show(image);
+    //         } else if (imgId == "forest") {
+    //             var image = "#forest";
+    //             show(image);
+    //         };
+    //         // var label = $(this).parent().siblings().attr("id");
+    //         // console.log(label);
+    //     })
+    // }
+    // selectPic();
 
     //image opacity change to 1 when click, and other image opacity change to 0.5
     function show(image) {
@@ -484,7 +506,8 @@ $(document).ready(function () {
             block_3_text: block3text1,
             e_mail: eMail1,
             phone: phone1,
-            place_location: placeLocation1
+            place_location: placeLocation1,
+            theme: theme
         };
         console.log(newWebsite)
 
