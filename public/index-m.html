@@ -62,10 +62,11 @@
     <div class="col s12 feature">
         <h4>Create your own website with just clicks!</h4>
         <p>
-For a simple yet compelling web presence, simply fill out the form below and we'll build your page. <br>
-You can upload a header image to catch the eye of visitors, and three smaller images to illustrate your content.<br>
-Then enter the headers you want, and cut-and-paste any blocks of text, and you're good to go!<br><Br>
-    TOO EASY
+            For a simple yet compelling web presence, simply fill out the form below and we'll build your page. <br>
+            You can upload a header image to catch the eye of visitors, and three smaller images to illustrate your
+            content.<br>
+            Then enter the headers you want, and cut-and-paste any blocks of text, and you're good to go!<br><Br>
+            TOO EASY
 
             We can help you to create your website in just a few simple clicks.
 
@@ -90,36 +91,44 @@ Then enter the headers you want, and cut-and-paste any blocks of text, and you'r
             </form>
         </div>
     </div>
-
+    <!-- This is where users upload images -->
     <div class="container">
         <div class="row">
             <div class="col s6" id="imageCol1">
                 <div class="form-group">
-                    <label for="" style="float:left;">Header Image: <br>The best size is 2000 px wide by 400 px High</label>
+                    <label for="" style="float:left;">Header Image: <br>The best size is 2000 px wide by 400 px
+                        High</label>
                     <input type="file" class="form-control image" id="upload_widget_header" name="header_image">
                 </div>
-<br>
+                <br>
                 <div class="form-group">
-                    <label for="" style="float:left;">Left Small Image: <br>The best size is 450px wide by 300px high</label>
+                    <label for="" style="float:left;">Left Small Image: <br>The best size is 450px wide by 300px
+                        high</label>
                     <input type="file" class="form-control image" id="upload_widget_block1" name="header_image">
-                    <!-- <input type="file" class="form-control" id="block_1_image" name="block_1_image"> -->
+                    
                 </div>
             </div>
             <div class="col s6" id="imageCol2">
                 <div class="form-group">
-                    
+
                     <input type="file" class="form-control image" id="upload_widget_block2" name="header_image">
-                    <label for="" style="float:right;">Middle Small Image:  <br>The best size is 450px wide by 300px high</label>
-                    <!-- <input type="file" class="form-control" id="block_2_image" name="block_2_image"> -->
+                    <label for="" style="float:right;">Middle Small Image: <br>The best size is 450px wide by 300px
+                        high</label>
+                    
                 </div>
                 <br>
                 <div class="form-group">
-                    
+
                     <input type="file" class="form-control image" id="upload_widget_block3" name="header_image">
-                    <label for="" style="float:right;">Right Small Image:  <br>The best size is 450px wide by 300px high</label>
-                    <!-- <input type="file" class="form-control" id="block_3_image" name="block_3_image"> -->
+                    <label for="" style="float:right;">Right Small Image: <br>The best size is 450px wide by 300px
+                        high</label>
+                    
                 </div>
             </div>
+        </div>
+        <!-- This is where the thumbnails of user uploads appear -->
+        <div class="row">
+            <ul class="cloudinary-thumbnails"></ul>
         </div>
     </div>
 
@@ -133,7 +142,7 @@ Then enter the headers you want, and cut-and-paste any blocks of text, and you'r
                     <hr>
                     <ul>
                         <li class="userChoice" id="title">
-                            
+
                             <!-- when the add button clicked, the info will be recored and save to db, and move to right side -->
                             <button type="submit" class="waves-effect waves-light btn btnList" id="titleBtn">
                                 <i class="fa fa-plus"></i>
@@ -141,70 +150,70 @@ Then enter the headers you want, and cut-and-paste any blocks of text, and you'r
                             Title
                         </li>
                         <li class="userChoice" id="tagline">
-                            
+
                             <button type="submit" class="waves-effect waves-light btn btnList" id="taglineBtn">
                                 <i class="fa fa-plus"></i>
                             </button>
                             Tagline
                         </li>
                         <li class="userChoice" id="block1Head">
-                            
+
                             <button type="submit" class="waves-effect waves-light btn btnList" id="block1HeadBtn">
                                 <i class="fa fa-plus"></i>
                             </button>
                             Sub-Heading 1
                         </li>
                         <li class="userChoice" id="block1Text">
-                            
+
                             <button type="submit" class="waves-effect waves-light btn btnList" id="block1TextBtn">
                                 <i class="fa fa-plus"></i>
                             </button>
                             Sub-Text 1
                         </li>
                         <li class="userChoice" id="block2Head">
-                            
+
                             <button type="submit" class="waves-effect waves-light btn btnList" id="block2HeadBtn">
                                 <i class="fa fa-plus"></i>
                             </button>
                             Sub-Heading 2
                         </li>
                         <li class="userChoice" id="block2Text">
-                            
+
                             <button type="submit" class="waves-effect waves-light btn btnList" id="block2TextBtn">
                                 <i class="fa fa-plus"></i>
                             </button>
                             Sub-Text 2
                         </li>
                         <li class="userChoice" id="block3Head">
-                            
+
                             <button type="submit" class="waves-effect waves-light btn btnList" id="block3HeadBtn">
                                 <i class="fa fa-plus"></i>
                             </button>
                             Sub-Heading 3
                         </li>
                         <li class="userChoice" id="block3Text">
-                            
+
                             <button type="submit" class="waves-effect waves-light btn btnList" id="block3TextBtn">
                                 <i class="fa fa-plus"></i>
                             </button>
                             Sub-Text 3
                         </li>
                         <li class="userChoice" id="eMail">
-                            
+
                             <button type="submit" class="waves-effect waves-light btn btnList" id="eMailBtn">
                                 <i class="fa fa-plus"></i>
                             </button>
                             E-mail
                         </li>
                         <li class="userChoice" id="phone">
-                            
+
                             <button type="submit" class="waves-effect waves-light btn btnList" id="phoneBtn">
                                 <i class="fa fa-plus"></i>
                             </button>
                             Phone Number
                         </li>
                         <li class="userChoice" id="placeLocation">
-                            
+
                             <button type="submit" class="waves-effect waves-light btn btnList" id="placeLocationBtn">
                                 <i class="fa fa-plus"></i>
                             </button>
