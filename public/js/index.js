@@ -3,7 +3,7 @@ var block1img = "";
 var block2img = "";
 var block3img = "";
 var titleAdd = false, taglineAdd = false, block1HeadAdd = false, block2HeadAdd = false, block3HeadAdd = false, block1TextAdd = false, block2TextAdd = false, block3TextAdd = false, eMailAdd = false, phoneAdd = false, placeLocationAdd = false;
-var theme = "mountain";
+var themeImage = [];
 
 $(document).ready(function () {
     $(".websiteLink").hide();
@@ -360,27 +360,30 @@ $(document).ready(function () {
     }
 
     // user choose themes
-    // function selectPic() {
-    //     $(".images").click(function () {
-    //         event.preventDefault();
-    //         var imgId = $(this).attr("id");
-    //         console.log(imgId);
+    function selectPic() {
+        $(".images").click(function () {
+            event.preventDefault();
+            var imgId = $(this).attr("id");
+            console.log(imgId);
 
-    //         if (imgId == "mountain") {
-    //             var image = "#mountain";
-    //             show(image);
-    //         } else if (imgId == "sunset") {
-    //             var image = "#sunset";
-    //             show(image);
-    //         } else if (imgId == "forest") {
-    //             var image = "#forest";
-    //             show(image);
-    //         };
-    //         // var label = $(this).parent().siblings().attr("id");
-    //         // console.log(label);
-    //     })
-    // }
-    // selectPic();
+            if (imgId == "mountain") {
+                var image = "#mountain";
+                show(image);
+            } else if (imgId == "sunset") {
+                var image = "#sunset";
+                show(image);
+            } else if (imgId == "forest") {
+                var image = "#forest";
+                show(image);
+            };
+            themeImage.splice(0, 1)
+            themeImage.push(imgId);
+            console.log(themeImage);
+            // var label = $(this).parent().siblings().attr("id");
+            // console.log(label);
+        })
+    }
+    selectPic();
 
     //image opacity change to 1 when click, and other image opacity change to 0.5
     function show(image) {
@@ -411,7 +414,7 @@ $(document).ready(function () {
         // console.log("e: " + e);
         // console.log("e.textcontent: " + e.textContent);
 
-        var title1 = "null", tagline1 = "null", block1Head1 = "null", block1text1 = "null", block2Head1 = "null", block2text1 = "null", block3Head1 = "null", block3text1 = "null";
+        var title1 = "null", tagline1 = "null", block1Head1 = "null", block1text1 = "null", block2Head1 = "null", block2text1 = "null", block3Head1 = "null", block3text1 = "null", themeChose = "null";
 
 
         if (titleAdd) {
@@ -487,6 +490,11 @@ $(document).ready(function () {
         else {
             placeLocation1 = null;
         }
+        if (themeChose) {
+            theme1 = themeImage[0];
+        } else {
+            theme1 = null;
+        }
 
         console.log("title1: " + title1);
         // make a new website obj
@@ -507,7 +515,7 @@ $(document).ready(function () {
             e_mail: eMail1,
             phone: phone1,
             place_location: placeLocation1,
-            theme: theme
+            theme: theme1
         };
         console.log(newWebsite)
 
@@ -528,6 +536,4 @@ $(document).ready(function () {
 
         // empty each input box by replacing the value with an empty string
     });
-
-
 });

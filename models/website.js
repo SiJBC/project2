@@ -72,7 +72,7 @@ module.exports = function (sequelize, DataTypes) {
     },
     theme: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     }
     // Website.associate = function(models) {
     //     // Associating post with User, require foreign key. 

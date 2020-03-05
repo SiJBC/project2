@@ -5,7 +5,7 @@
 #header_image {
     background-position: center;
     background-size: cover;
-    background-image: url("../image/forest2.jpg");
+    /* background-image: url("../image/forest2.jpg"); */
     min-height: 75%;
 }
 
@@ -17,7 +17,7 @@
     font-family: 'Varela Round', sans-serif;
 }
 
-#tagline {
+#taglineInput {
     text-align: center;
     padding-bottom: 15rem;
     color: #9caa1e;
@@ -33,6 +33,7 @@
 
 #mainBlocks {
     margin-bottom: 5rem;
+    margin-bottom: 5rem;
 }
 
 #contact {
@@ -40,7 +41,7 @@
     color: #c3ce6a;
     font-family: 'Varela Round', sans-serif;
     text-align: right;
-    padding-right: 25rem;
+    padding-right: 5rem;
     padding-top: 0.4rem;
     margin-bottom: -1rem;
 }
@@ -57,7 +58,6 @@
     bottom: 0;
     padding-top: 0.2rem;
     padding-bottom: 0.1rem;
-    font-size: 1.1rem;
     text-align: center;
 }
 
