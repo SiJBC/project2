@@ -45,7 +45,7 @@ app.set("view engine", "handlebars");
 // =============================================================
 cloudinary.config({ 
   cloud_name: 'onepageman', 
- 
+
 });
 
 // Syncing our sequelize models and then starting our Express app
