@@ -3,11 +3,7 @@ var block1img = "";
 var block2img = "";
 var block3img = "";
 var titleAdd = false, taglineAdd = false, block1HeadAdd = false, block2HeadAdd = false, block3HeadAdd = false, block1TextAdd = false, block2TextAdd = false, block3TextAdd = false, eMailAdd = false, phoneAdd = false, placeLocationAdd = false;
-<<<<<<< HEAD
 var themeImage = [];
-=======
-var theme = "mountain";
->>>>>>> d7ae352e7616c8b4e2c7ac6b05af7ad0daf83469
 
 $(document).ready(function () {
     $(".websiteLink").hide();
@@ -364,7 +360,6 @@ $(document).ready(function () {
     }
 
     // user choose themes
-<<<<<<< HEAD
     function selectPic() {
         $(".images").click(function () {
             event.preventDefault();
@@ -389,29 +384,6 @@ $(document).ready(function () {
         })
     }
     selectPic();
-=======
-    // function selectPic() {
-    //     $(".images").click(function () {
-    //         event.preventDefault();
-    //         var imgId = $(this).attr("id");
-    //         console.log(imgId);
-
-    //         if (imgId == "mountain") {
-    //             var image = "#mountain";
-    //             show(image);
-    //         } else if (imgId == "sunset") {
-    //             var image = "#sunset";
-    //             show(image);
-    //         } else if (imgId == "forest") {
-    //             var image = "#forest";
-    //             show(image);
-    //         };
-    //         // var label = $(this).parent().siblings().attr("id");
-    //         // console.log(label);
-    //     })
-    // }
-    // selectPic();
->>>>>>> d7ae352e7616c8b4e2c7ac6b05af7ad0daf83469
 
     //image opacity change to 1 when click, and other image opacity change to 0.5
     function show(image) {
@@ -543,11 +515,7 @@ $(document).ready(function () {
             e_mail: eMail1,
             phone: phone1,
             place_location: placeLocation1,
-<<<<<<< HEAD
             theme: theme1
-=======
-            theme: theme
->>>>>>> d7ae352e7616c8b4e2c7ac6b05af7ad0daf83469
         };
         console.log(newWebsite)
 
@@ -568,6 +536,4 @@ $(document).ready(function () {
 
         // empty each input box by replacing the value with an empty string
     });
-
-
 });
