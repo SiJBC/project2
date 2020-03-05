@@ -69,6 +69,10 @@ module.exports = function (sequelize, DataTypes) {
     place_location: {
       type: DataTypes.STRING,
       allowNull: true,
+    },
+    theme: {
+      type: DataTypes.STRING,
+      allowNull: true,
     }
     // Website.associate = function(models) {
     //     // Associating post with User, require foreign key. 
