@@ -45,8 +45,7 @@ app.set("view engine", "handlebars");
 // =============================================================
 cloudinary.config({ 
   cloud_name: 'onepageman', 
-  api_key: '795943177824595', 
-  api_secret: 'S82d6zuIBvVTzAGPdWIeSt4hHBY' 
+ 
 });
 
 // Syncing our sequelize models and then starting our Express app
