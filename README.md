@@ -26,7 +26,7 @@ The webpages are created with the CSS framework Materialize. The pages deployed 
 - Materialize
 
 **Contributors:** 
-* [James Pearce](link your profile here) - Backend
+* [James Pearce](https://github.com/JEQP) - Backend (Database, Sequelize, Data Manipulation)
 * [Simon Colman](link your profile here) - Backend
 * [Sherry Jin](https://sherryj-sk.github.io/) - Frontend (HTML, CSS, JavaScript)
 
