@@ -19,6 +19,7 @@ The webpages are created with the CSS framework Materialize. The pages deployed 
 ![Deployed Page](https://github.com/SiJBC/project2/blob/master/readme2.jpg)
 
 ### Acknowledge
+- Nodemon
 - Sequelize
 - MySql
 - Cloudinary
